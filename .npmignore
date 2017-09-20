@@ -1,0 +1,8 @@
+example
+src
+node_modules
+.babelrc
+.eslintrc.js
+package-lock.json
+sftp-config.json
+.npmignore

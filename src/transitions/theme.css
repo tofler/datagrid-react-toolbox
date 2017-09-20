@@ -1,0 +1,184 @@
+@import 'react-toolbox/lib/variables.css';
+:root {
+    --trans-max-height : 2000px;
+    --trans-max-width : 500px;
+}
+.trans-height {
+    :global {
+        .trans-height-fast-appear {
+            max-height: 20px;
+            transform: scaleY(0);
+            transform-origin: top;
+            opacity: 0.01;
+            &.trans-height-fast-appear-active {
+                opacity: 1;
+                max-height: var(--trans-max-height);
+                transform: scaleY(1);
+                transition: all var(--animation-duration) var(--animation-curve-default);
+            }
+        }
+
+        .trans-height-fast-enter {
+            max-height: 20px;
+            transform: scaleY(0);
+            transform-origin: top;
+            opacity: 0.01;
+            &.trans-height-fast-enter-active {
+                opacity: 1;
+                max-height: var(--trans-max-height);
+                transform: scaleY(1);
+                transition: all var(--animation-duration) var(--animation-curve-default);
+            }
+        }
+
+        .trans-height-fast-leave {
+            max-height: var(--trans-max-height);
+            transform: scaleY(1);
+            transform-origin: top;
+            opacity: 1;
+            &.trans-height-fast-leave-active {
+                opacity: 0.01;
+                max-height: 20px;
+                transform: scaleY(0);
+                transition: all var(--animation-duration) var(--animation-curve-default);
+            }
+        }
+
+        .trans-height-slow-appear {
+            max-height: 20px;
+            transform: scaleY(0);
+            transform-origin: top;
+            opacity: 0.01;
+            &.trans-height-slow-appear-active {
+                opacity: 1;
+                max-height: var(--trans-max-height);
+                transform: scaleY(1);
+                transition: all calc(var(--animation-duration) * 2) var(--animation-curve-default);
+            }
+        }
+
+        .trans-height-slow-enter {
+            max-height: 20px;
+            transform: scaleY(0);
+            transform-origin: top;
+            opacity: 0.01;
+            &.trans-height-slow-enter-active {
+                opacity: 1;
+                max-height: var(--trans-max-height);
+                transform: scaleY(1);
+                transition: all calc(var(--animation-duration) * 2) var(--animation-curve-default);
+            }
+        }
+
+        .trans-height-slow-leave {
+            max-height: var(--trans-max-height);
+            transform: scaleY(1);
+            transform-origin: top;
+            opacity: 1;
+            &.trans-height-slow-leave-active {
+                opacity: 0.01;
+                max-height: 20px;
+                transform: scaleY(0);
+                transition: all calc(var(--animation-duration) * 2) var(--animation-curve-default);
+            }
+        }
+    }
+}
+.trans-fade {
+    :global {
+        .trans-fade-fast-enter {
+            opacity: 0.01;
+            &.trans-fade-fast-enter-active {
+                opacity: 1;
+                transition: all var(--animation-duration) var(--animation-curve-default);
+            }
+        }
+
+        .trans-fade-fast-leave {
+            opacity: 1;
+            &.trans-fade-fast-leave-active {
+                opacity: 0.01;
+                transition: all var(--animation-duration) var(--animation-curve-default);
+            }
+        }
+
+        .trans-fade-slow-enter {
+            opacity: 0.01;
+            &.trans-fade-slow-enter-active {
+                opacity: 1;
+                transition: all calc(var(--animation-duration) * 2) ease-in-out;
+            }
+        }
+
+        .trans-fade-slow-leave {
+            opacity: 1;
+            &.trans-fade-slow-leave-active {
+                opacity: 0.01;
+                transition: all calc(var(--animation-duration) * 2) ease-in-out;
+            }
+        }
+    }
+}
+.trans-slide {
+    :global {
+        .trans-slide-fast-appear {
+            max-width: 20px;
+            opacity: 0.01;
+            &.trans-slide-fast-appear-active {
+                opacity: 1;
+                max-width: var(--trans-max-width);
+                transition: all var(--animation-duration) var(--animation-curve-default);
+            }
+        }
+
+        .trans-slide-fast-enter {
+            max-width: 20px;
+            opacity: 0.01;
+            &.trans-slide-fast-enter-active {
+                opacity: 1;
+                max-width: var(--trans-max-width);
+                transition: all var(--animation-duration) var(--animation-curve-default);
+            }
+        }
+
+        .trans-slide-fast-leave {
+            max-width: var(--trans-max-width);
+            opacity: 1;
+            &.trans-slide-fast-leave-active {
+                opacity: 0.01;
+                max-width: 20px;
+                transition: all var(--animation-duration) var(--animation-curve-default);
+            }
+        }
+
+        .trans-slide-slow-appear {
+            max-width: 20px;
+            opacity: 0.01;
+            &.trans-slide-slow-appear-active {
+                opacity: 1;
+                max-width: var(--trans-max-width);
+                transition: all calc(var(--animation-duration) * 2) var(--animation-curve-default);
+            }
+        }
+
+        .trans-slide-slow-enter {
+            max-width: 20px;
+            opacity: 0.01;
+            &.trans-slide-slow-enter-active {
+                opacity: 1;
+                max-width: var(--trans-max-width);
+                transition: all calc(var(--animation-duration) * 2) var(--animation-curve-default);
+            }
+        }
+
+        .trans-slide-slow-leave {
+            max-width: var(--trans-max-width);
+            opacity: 1;
+            &.trans-slide-slow-leave-active {
+                opacity: 0.01;
+                max-width: 20px;
+                transition: all calc(var(--animation-duration) * 2) var(--animation-curve-default);
+            }
+        }
+    }
+}

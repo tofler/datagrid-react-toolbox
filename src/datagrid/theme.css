@@ -1,0 +1,177 @@
+@import 'react-toolbox/lib/variables.css';
+@import 'react-toolbox/lib/colors.css';
+
+:root {
+    --color-border-gray: rgba(0, 0, 0, 0.2);
+    --color-bg-gray: #fafafa;
+    --gutter-size: 15px;
+    --size-icon: 24px;
+}
+
+.datagrid {
+    transition: height var(--animation-duration) var(--animation-curve-default);
+    // max-height: 2000px;
+    .datagrid-title {
+        > div {
+            width: 100%;
+        }
+        .datagrid-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .datagrid-caption {
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 1.25;
+            margin: 0;
+        }
+        .datagrid-extra-info {
+            font-style: italic;
+            min-height: 1.25em;
+        }
+        .datagrid-actions {
+            .datagrid-filter {
+                position: relative;
+                .filter-input {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background: var(--color-bg-gray);
+                    padding-left: var(--gutter-size);
+                    padding-right: var(--gutter-size);
+                    box-shadow: var(--zdepth-shadow-2);
+                    width: 250px;
+                    [data-react-toolbox="input"] {
+                        position: relative;
+                        .clear-filter-button {
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            top: 0;
+                            vertical-align: middle;
+                            height: 100%;
+                            color: var(--color-border-gray);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .datagrid-body {
+        overflow-x: auto;
+    }
+}
+.datagrid-row {
+    td {
+        border-bottom: none!important;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    transition: all var(--animation-duration) var(--animation-curve-default);
+    &:hover {
+        background: var(--color-bg-gray);
+        + tr {
+            td {
+                background: var(--color-bg-gray);
+            }
+        }
+    }
+}
+.datagrid-row-hidden {
+    height: 0!important;
+    > td {
+        height: 1px!important; /* 1px is make the border visible */
+        padding: 0!important;
+        border-top: none;
+    }
+    &:hover {
+        td {
+            background: var(--color-white);
+        }
+    }
+    .hidden-content-item {
+        .hidden-content-item-head {
+            color: var(--color-text-secondary);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 24px;
+            padding-bottom: 8px;
+            text-overflow: ellipsis;
+            min-width: 20%;
+            display: inline-block;
+            margin-left: 60px;
+            font-style: italic;
+            padding-right: var(--gutter-size);
+        }
+        .hidden-content-item-data {
+
+        }
+    }
+}
+.hidden-content-button-cell {
+    padding: 0 !important;
+    width: var(--size-icon);
+    .hidden-content-toggle-button {
+        .expanded {
+            transition: all var(--animation-duration) var(--animation-curve-default);
+            transform: rotate(90deg);
+        }
+        .collapsed {
+            transition: all var(--animation-duration) var(--animation-curve-default);
+            transform: rotate(0deg);
+        }
+    }
+}
+.datagrid-table-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--gutter-size);
+    align-items: center;
+    .info-range-wrapper {
+    }
+    .pagination-wrapper {
+        .pagination {
+            display: flex;
+            .pagination-node {
+                flex: 1;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.swipe-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .swipe-area-column {
+        display: inline-block;
+        margin: calc(var(--gutter-size) / 2);
+        width: calc(var(--gutter-size) / 3);
+        height: calc(var(--gutter-size) / 3);
+        border-radius: var(--gutter-size);
+        background: var(--color-bg-gray);
+        transition: all 0.35s ease-in-out;
+        &.active {
+            width: var(--gutter-size);
+            height: var(--gutter-size);
+            background: var(--color-border-gray);
+        }
+    }
+}
+/*@media (--xs-only) {
+    .datagrid-table-info {
+        flex-direction: column;
+        align-items: center;
+        .pagination-wrapper{
+            .pagination {
+                .pagination-node {
+                    &:not(:first-of-type):not(:last-of-type) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}*/
