@@ -1,0 +1,11 @@
+---
+ name: DataGrid React Toolbox Demo
+ description: DataGrid React Toolbox is a React component for displaying data in tabular way. Checkout https://github.com/tofler/datagrid-react-toolbox/
+ authors:
+   - Parijat
+   - Kalyan
+   - Himanshu
+
+ normalize_css: no
+ ...
+
