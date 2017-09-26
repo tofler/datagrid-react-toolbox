@@ -5,7 +5,9 @@
    - Parijat
    - Kalyan
    - Himanshu
-
+ resources:
+   - https://rawgit.com/himanshu219/datagrid-react-toolbox/master/example/jsfiddle/datagrid.css
+   - https://rawgit.com/himanshu219/datagrid-react-toolbox/master/example/jsfiddle/datagrid.js
  normalize_css: no
  ...
 
