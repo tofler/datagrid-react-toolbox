@@ -87,5 +87,6 @@
     "type": "git",
     "url": "git://github.com/tofler/datagrid-react-toolbox.git"
   },
-  "author": "Parijat, Kalyan, Himanshu"  
+  "author": "Parijat, Kalyan, Himanshu",
+  "LICENSE": "MIT"
 }

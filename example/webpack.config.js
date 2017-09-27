@@ -11,8 +11,8 @@ let config = {
     },
     output: {
         filename: 'index.js',
-        path: path.resolve(__dirname, 'build'),
-        publicPath: '/build/',
+        path: path.resolve(__dirname, 'jsfiddle'),
+        publicPath: '/jsfiddle/',
         libraryTarget: 'umd',
         library: 'DataGridReactToolBox'
     },
