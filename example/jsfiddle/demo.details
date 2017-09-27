@@ -8,6 +8,8 @@
  resources:
    - https://rawgit.com/himanshu219/datagrid-react-toolbox/master/example/jsfiddle/datagrid.css
    - https://rawgit.com/himanshu219/datagrid-react-toolbox/master/example/jsfiddle/datagrid.js
+   - https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js
+   - https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react-with-addons.js
  normalize_css: no
  ...
 

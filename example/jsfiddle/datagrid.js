@@ -19903,6 +19903,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _datagrid2.default;
 exports.DataGrid = _datagrid2.default;
 
+window.DataGrid = _datagrid2.default;
+window.DataGrid.variables = variables;
+
 /***/ }),
 /* 167 */
 /***/ (function(module, exports, __webpack_require__) {

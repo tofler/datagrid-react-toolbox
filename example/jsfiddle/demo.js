@@ -1,160 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import DataGrid, { variables } from '../lib';
-
 const reactRoot = window.document.getElementById('reactRoot');
 
 const data = [
     { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
-    { row1: 1, row2: 2, row3: 3, row4: 9 },
-    { row1: 3, row2: 4, row3: 5, row4: 9 },
-    { row1: 5, row2: 6, row3: 7, row4: 9 },
+    { row1: 3, row2: 4, row3: 5, row4: 9 }
 ];
 const columnProperties = [{
     name: 'row1',
@@ -165,19 +13,25 @@ const columnProperties = [{
 }, {
     name: 'row3',
     title: 'Row 3',
-    hidden: variables.media['--md-and-down'],
+    
 }, {
     name: 'row4',
     title: 'Row 4',
-    hidden: variables.media['--md-and-down'],
+    
 }];
 
-const TestDataGrid = <DataGrid 
-                        columnProperties={columnProperties}
-                        data={data} caption="Data Grid Test"
-                    /> ;
+class TestDataGrid extends React.Component {
+    render() {
+    console.log(DataGrid);
+    //return (<p>Helllo worws</p>);
+    return (
+        <DataGrid.DataGrid 
+        columnProperties={columnProperties}
+        data={data} caption="Data Grid Test"
+      />
+    );
+  }
+  
+}
 
-ReactDOM.render(
-        <div> {TestDataGrid}</div>,
-    reactRoot,
-);
+React.render(<TestDataGrid />, reactRoot);
