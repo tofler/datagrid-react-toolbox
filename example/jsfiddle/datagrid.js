@@ -19904,7 +19904,6 @@ exports.default = _datagrid2.default;
 exports.DataGrid = _datagrid2.default;
 
 window.DataGrid = _datagrid2.default;
-window.DataGrid.variables = variables;
 
 /***/ }),
 /* 167 */
