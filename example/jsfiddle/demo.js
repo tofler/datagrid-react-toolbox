@@ -25,7 +25,7 @@ class TestDataGrid extends React.Component {
     console.log(DataGrid);
     //return (<p>Helllo worws</p>);
     return (
-        <DataGrid.DataGrid 
+        <window.DataGrid
         columnProperties={columnProperties}
         data={data} caption="Data Grid Test"
       />
